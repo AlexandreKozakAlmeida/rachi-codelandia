@@ -31,7 +31,7 @@
  .container {
     display: flex;
     width: 95%;
-    min-width: 300px;
+    min-width: 200px;
     margin: 0 auto;
  }
 
@@ -104,6 +104,10 @@
    font-weight: 600;
 
    cursor: pointer;
+}
+
+#home .container .image svg {
+   width: 30rem;
 }
 
 /********* HOW WORKS SECTION **************/
@@ -430,12 +434,12 @@ footer {
 @media screen and (min-width: 320px) and (max-width: 767px) {
    body {
       overflow-x: hidden;
-     
-   }
+  }
 
    header .container nav ul {
       display: none;
    }
+
    #home .container {
       flex-direction: column;
    }
@@ -445,8 +449,8 @@ footer {
       text-align: center;
    }
 
-   #home .container .apresentation svg {
-      width: 30em;
+   #home .container .image svg {
+      width: 90%;
    }
 
    #howWorks .container {
