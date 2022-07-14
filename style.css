@@ -431,7 +431,32 @@ footer {
 
 /********* RESPONSIVE ************/
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 1024px)  {
+  
+   #plans .container .cards {
+      gap: 3rem;
+   }
+  
+   #plans .container .cards .card {
+      width: 30em;
+   }
+}
+
+@media screen and (min-width: 768px) {
+   #howWorks .container {
+      margin: 3rem auto;
+   }
+
+   #plans .container .cards {
+      gap: 1rem;
+   }
+
+   #plans .container .cards .card {
+      width: 30%;
+   }
+}
+
+@media screen and (max-width: 767px) {
    body {
       overflow-x: hidden;
   }
