@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@300;400;600;700&display=swap');
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+ }
+
+ :root {
+    --blue: #0F9AFE;
+    --white: #FFFFFF;
+    --white-400: #EFF8FF;
+    --gray-light: #DBDBDB;
+    --gray: #6E7275;
+    --gray-200: #293145;
+
+   }
+
+ html, 
+ body {
+    height: 100vh;
+ }
+
+ body {
+   font-size: 62.5%;
+ }
+
+ .container {
+    display: flex;
+    width: 95%;
+    min-width: 200px;
+    margin: 0 auto;
+ }
+
+ a {
+    color: var(--gray);
+    font-weight: 600;
+ }
+
+ a:hover {
+   color: var(--blue);
+   transition: .5s;
+ }
+
+ h2 {
+   font-size: 2rem;
+   font-family: 'Sora', sans-serif;
+   font-weight: 600;
+ }
+
+ /******** HEADER *****/
+
+ header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ header .container nav ul {
+    display: flex;
+    gap: 3rem;
+    font-size: 1.6em;
+ }
+ 
+ /****** home section *******/
+
+#home {
+    background-color: var(--white-400);
+}
+
+ #home .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#home .container .apresentation {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 1rem;
+}
+
+#home .container .apresentation .title {
+    font: 'Sora', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+#home .container .apresentation button {
+   background-color: var(--blue);
+   color: var(--white);
+
+   height: 2.5em;
+   width: 8em;
+
+   border-radius: 3rem;
+   border: 1px solid var(--white);
+   font-size: 1.8em;
+
+   font-family: 'Inter', sans-serif;
+   font-weight: 600;
+
+   cursor: pointer;
+}
+
+#home .container .image svg {
+   width: 30rem;
+}
+
+/********* HOW WORKS SECTION **************/
+
+#howWorks .container {
+   margin: 3rem;
+   flex-direction: column;
+  
+   align-items: center;
+   text-align: center;
+   gap: 15em;
+}
+
+#btnMobile {
+display: none;
+flex-direction: column;
+gap: .2rem;
+}
+
+.line1,
+.line2,
+.line3 {
+width: 1.6rem;
+border: 2px solid black;
+}
+
+
+#howWorks .container ul {
+   display: flex;
+   gap: 3rem;
+}
+
+#howWorks .container ul li {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+}
+
+#howWorks .container ul li .title {
+   font-family: 'Inter', sans-serif;
+   font-size: 1.7em;
+   font-weight: 500;
+}
+
+#howWorks .container ul li .info {
+   font-family: 'Inter', sans-serif;
+   font-size: 1.4em;
+   font-weight: 500;
+
+   color: var(--gray);
+}
+
+/********** DOWNLOAD SECTION **********/
+#download {
+   background-color: var(--white-400);
+}
+
+#download .container {
+  align-items: center;
+}
+
+#download .container .appInfo {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+
+#download .container .appInfo h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+#download .container .appInfo .downloadText {
+   font-family: 'Inter', sans-serif;
+   font-weight: 500;
+   font-size: 1.2rem;
+   width: 80%;
+ 
+   color: var(--gray);
+}
+#download .container .appInfo .buttons {
+   display: flex;
+   gap: 1rem;
+}
+
+
+#download .container .appInfo .buttons button {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   text-align: center;
+    
+   border-radius: 1em;
+
+   width: 10rem;
+   height: 3rem;
+   
+   gap: .5rem;
+ 
+   background-color: var(--gray-200);
+   color: var(--white);
+
+   cursor: pointer;
+}
+
+#download .container .downloadImage svg {
+   width: 25rem;
+  
+}
+
+#download .container .appInfo .buttons button svg {
+   height: 2rem;
+   margin-left: .4rem;
+}
+
+#download .container .appInfo .buttons button p {
+   font-family: 'Inter', sans-serif;
+   font-size: 1rem;
+   font-weight: 800;
+}
+
+#download .container .appInfo .buttons button span {
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+/******* PLANS SECTION ***********/
+
+#plans .container {
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+
+   margin-top: 3rem;
+}
+
+#plans .container .plansTitle {
+   display: flex;
+   flex-direction: column;
+
+   gap: 1rem;
+
+   text-align: center;
+}
+
+#plans .container .plansTitle p {
+   font-family: 'Inter', sans-serif;
+   font-weight: 700;
+   font-size: 1.8em;
+ 
+   color: var(--gray);
+ 
+   width: 35rem;
+}
+
+#plans .container .cards {
+   display: flex;
+   justify-content: space-evenly;
+   gap: 5rem;
+   margin-top: 5rem;
+}
+
+#plans .container .cards .card {
+   display: flex;
+   flex-direction: column;
+   
+   width: 18rem;
+   height: 20rem;
+   
+   border-radius: 1em;
+
+   gap: 1rem;
+
+   background-color: var(--white-400);
+
+}
+
+#plans .container .cards .card .type {
+   font-family: 'Sora', sans-serif;
+   font-weight: 600;
+   font-size: 3em;
+}
+
+#plans .container .cards .card .price {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+   font-size: 2.3em;
+}
+
+#plans .container .cards .card .price span {
+   font-size: 2.31em;
+}
+
+#plans .container .cards .card .planInfo {
+   font-family: 'Inter', sans-serif;
+   font-size: 1.5em;
+   font-weight: 500;
+   
+   color: var(--gray);
+}
+
+#plans .container .cards .card button {
+   width: 11em;
+   height: 2em;
+
+   font-family: 'Inter', sans-serif;
+   font-weight: 600;
+   font-size: 1.7em;
+
+   background-color: var(--blue);
+   color: var(--white);
+
+   border: none;
+   border-radius: 1em;
+ 
+   margin: 1em   auto;
+
+   cursor: pointer;
+}
+
+#plans .container .cards .card:hover {
+    color: white;
+    background-color: var(--gray-200);
+    transition: .3s;
+}
+
+#plans .container .cards .card:hover .planInfo {
+   color: white;
+   transition: .3s;
+}
+
+/******* CONTACT SECTION **********/
+
+#contact {
+   margin-top: 2em;
+   background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(./assets/bgContact.jpeg);
+   
+   background-size: 100% 100%;
+
+   height: 42vh;
+
+   color: var(--white);
+}
+
+#contact .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+ 
+   height: 100%;
+}
+
+#contact .container .contactInfo{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+
+   gap: 1rem;
+}
+
+#contact .container p {
+   font-family: 'Inter', sans-serif;
+   font-weight: 800;
+   font-size: 1.4em;
+   color: var(--gray-light);
+   width: 50%;
+}
+
+#contact .container form {
+   display: flex;
+   align-items: center;
+   gap: .4em;
+ }
+
+#contact .container form input {
+   background-color: #000000;
+
+   border: none;
+   border: 1px solid var(--white);
+   
+
+   height: 2rem;
+
+   font-family: 'Inter', sans-serif;
+   font-weight: 600;
+   color: var(--white);
+
+}
+ 
+#contact .container form input::placeholder {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+   color: var(--white);
+}
+
+#contact .container form button {
+   height: 2rem;
+   width: 7rem;
+
+   border-radius: 1rem;
+   border: none;
+
+   background-color: var(--blue);
+   color: var(--white);
+
+   font-family: 'Inter', sans-serif;
+   font-weight: 600;
+   font-size: 1rem;
+
+   cursor: pointer;
+}
+
+/****** FOOTER ********/
+
+footer {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+  
+   height: 10vh;
+  
+   font-family: 'Inter';
+   font-size: 1.2rem;
+  
+   color: var(--gray);
+}
+
+
+/********* RESPONSIVE ************/
+
+@media screen and (min-width: 1024px)  {
+  
+   #plans .container .cards {
+      gap: 3rem;
+   }
+  
+   #plans .container .cards .card {
+      width: 30em;
+   }
+}
+
+@media screen and (min-width: 768px) {
+   #howWorks .container {
+      margin: 3rem auto;
+   }
+
+   #plans .container .cards {
+      gap: 1rem;
+   }
+
+   #plans .container .cards .card {
+      width: 30%;
+   }
+}
+
+@media screen and (max-width: 767px) {
+   body {
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+  }
+
+  header .container #nav ul {
+   display: none;
+  }
+
+  /*** MENU BUTTON ANIMATION ***/
+
+  header .container #nav #btnMobile {
+   display: flex;
+   z-index: 101;
+   position: absolute;
+   right: 1rem;
+   top: .4rem;
+  }
+
+  header .container #nav.active ul {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   background-color: var(--white-400);
+   
+   position: fixed;
+   left: 0;
+   top: 0;
+  
+   height: 100vh;
+   width: 100vw;
+
+   z-index: 100;
+
+   font-size: 2rem;
+
+   animation: openMenu .3s;
+  }
+
+  header .container #nav.active ul li {
+   animation: opacity .7s;
+  }
+
+  header .container #nav.active #btnMobile .line1 {
+   transform: translateY(11px) rotate(45deg);
+   transition: 1s;
+  }
+
+  header .container #nav.active #btnMobile .line2 {
+   opacity: 0;
+   transition: 1s;
+  }
+
+  header .container #nav.active #btnMobile .line3 {
+   transform: translateY(-3px) rotate(-45deg);
+   transition: 1s;
+  } 
+
+  /**** MENU LINKS CONFIGURE ****/
+
+   header .container #nav ul a {
+   color: black;
+  }
+
+  /************ HOME SECTION ********/
+
+   #home .container {
+      flex-direction: column;
+   }
+
+   #home .container .apresentation {
+      align-items: center;
+      text-align: center;
+   }
+
+   #home .container .image svg {
+      width: 90%;
+   }
+
+   /************** HOW WORKS SECTION ************/
+
+   #howWorks {
+      margin-top: 2rem;
+   }
+
+   #howWorks .container {
+      margin: 0 auto;
+      gap: 3rem;
+   }
+
+   #howWorks .container ul {
+      flex-direction: column;
+   }
+
+   /************** DOWNLOAD SECTION ************/
+
+   #download {
+      margin-top: 2rem;
+   }
+
+   #download .container {
+      flex-direction: column;
+   }
+
+   #download .container .appInfo {
+      text-align: center;
+      align-items: center;
+   }
+
+   #download .container .appInfo .buttons {
+      flex-direction: column;
+   }
+
+   #download .container .downloadImage svg {
+      width: 90%;
+      margin: 0 auto;
+   }
+
+   /*********** PLANS SECTION *************/
+
+   #plans .container .plansTitle p {
+      width: 100%;
+   }
+
+   #plans .container .cards {
+      flex-direction: column;
+   }
+
+   #contact .container p {
+      width: 70%;
+   }
+
+   #contact .container form {
+      flex-direction: column;
+   }
+
+   /******** KEYFRAMES *********/
+
+
+  @keyframes openMenu {
+   from {
+      height: 0vh;
+      opacity: 0;
+   }
+   100% {
+      height: 100vh;
+      opacity: 1;
+   }
+ }
+
+ @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+ }
+
+
+
+}
+
