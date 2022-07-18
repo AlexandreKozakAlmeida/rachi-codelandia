@@ -19,12 +19,17 @@
                     </svg>
                     
             </div> <!--LOGO-->
-            <nav>
-                <ul>
-                    <li> <a href="#">Funcionalidades</a> </li>
-                    <li> <a href="#">App</a></li>
-                    <li> <a href="#">Planos</a></li>
-                    <li> <a href="#">Contato</a></li>
+            <nav id="nav">
+                <div id="btnMobile">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul id="links">
+                    <li> <a onclick="closeMenu()" href="#howWorks">Funcionalidades</a> </li>
+                    <li> <a onclick="closeMenu()" href="#donwload">App</a></li>
+                    <li> <a onclick="closeMenu()" href="#plans">Planos</a></li>
+                    <li> <a onclick="closeMenu()" href="#contact">Contato</a></li>
                 </ul>
             </nav>
         </div> <!--CONTAINER-->
@@ -691,6 +696,8 @@
         Rachi - Todos os direitos reservados.
     </p>
     </footer>
+
+    <script src="./menuMobile.js"></script>
 </body>
 </html>
 

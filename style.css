@@ -64,8 +64,9 @@
     gap: 3rem;
     font-size: 1.6em;
  }
-
+ 
  /****** home section *******/
+
 #home {
     background-color: var(--white-400);
 }
@@ -121,6 +122,18 @@
    gap: 15em;
 }
 
+#btnMobile {
+display: none;
+flex-direction: column;
+gap: .2rem;
+}
+
+.line1,
+.line2,
+.line3 {
+width: 1.6rem;
+border: 2px solid black;
+}
 
 
 #howWorks .container ul {
@@ -459,11 +472,71 @@ footer {
 @media screen and (max-width: 767px) {
    body {
       overflow-x: hidden;
+      scroll-behavior: smooth;
   }
 
-   header .container nav ul {
-      display: none;
-   }
+  header .container #nav ul {
+   display: none;
+  }
+
+  /*** MENU BUTTON ANIMATION ***/
+
+  header .container #nav #btnMobile {
+   display: flex;
+   z-index: 101;
+   position: absolute;
+   right: 1rem;
+   top: .4rem;
+  }
+
+  header .container #nav.active ul {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   background-color: var(--white-400);
+   
+   position: fixed;
+   left: 0;
+   top: 0;
+  
+   height: 100vh;
+   width: 100vw;
+
+   z-index: 100;
+
+   font-size: 2rem;
+
+   animation: openMenu .3s;
+  }
+
+  header .container #nav.active ul li {
+   animation: opacity .7s;
+  }
+
+  header .container #nav.active #btnMobile .line1 {
+   transform: translateY(11px) rotate(45deg);
+   transition: 1s;
+  }
+
+  header .container #nav.active #btnMobile .line2 {
+   opacity: 0;
+   transition: 1s;
+  }
+
+  header .container #nav.active #btnMobile .line3 {
+   transform: translateY(-3px) rotate(-45deg);
+   transition: 1s;
+  } 
+
+  /**** MENU LINKS CONFIGURE ****/
+
+   header .container #nav ul a {
+   color: black;
+  }
+
+  /************ HOME SECTION ********/
 
    #home .container {
       flex-direction: column;
@@ -478,6 +551,12 @@ footer {
       width: 90%;
    }
 
+   /************** HOW WORKS SECTION ************/
+
+   #howWorks {
+      margin-top: 2rem;
+   }
+
    #howWorks .container {
       margin: 0 auto;
       gap: 3rem;
@@ -485,6 +564,12 @@ footer {
 
    #howWorks .container ul {
       flex-direction: column;
+   }
+
+   /************** DOWNLOAD SECTION ************/
+
+   #download {
+      margin-top: 2rem;
    }
 
    #download .container {
@@ -505,6 +590,8 @@ footer {
       margin: 0 auto;
    }
 
+   /*********** PLANS SECTION *************/
+
    #plans .container .plansTitle p {
       width: 100%;
    }
@@ -520,5 +607,32 @@ footer {
    #contact .container form {
       flex-direction: column;
    }
+
+   /******** KEYFRAMES *********/
+
+
+  @keyframes openMenu {
+   from {
+      height: 0vh;
+      opacity: 0;
+   }
+   100% {
+      height: 100vh;
+      opacity: 1;
+   }
+ }
+
+ @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+ }
+
+
+
 }
 
